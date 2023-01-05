@@ -1,0 +1,16 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start-no-sandbox": "electron --no-sandbox .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gavin Francis <gav@eh7.co.uk>",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^22.0.0"
+  }
+}
