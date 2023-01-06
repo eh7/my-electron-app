@@ -2,9 +2,10 @@
   "name": "my-electron-app",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "electron .",
+    "startOld": "electron .",
     "start-no-sandbox": "electron --no-sandbox .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,5 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^22.0.0"
+  },
+  "dependencies": {
+    "libp2p": "^0.41.0"
   }
 }

@@ -7,9 +7,11 @@ const {
   Menu,
   MenuItem,
 } = require('electron')
+const {
+  P2P
+} = require('./services/p2p')
 
 const path = require('path')
-
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -20,7 +22,11 @@ const createWindow = () => {
     }
   })
   ipcMain.handle('ping', () => 'pong')
-  win.loadFile('index.html')
+  //win.loadURL(`file://${ __dirname}/index.html`)
+  win.loadFile(
+    path.join(__dirname, 'index.html')
+  )
+  //win.loadFile('index.html')
 
   const menu = new Menu()
   menu.append(new MenuItem({
@@ -36,8 +42,6 @@ const createWindow = () => {
     }]
   }))
   Menu.setApplicationMenu(menu)
-/*
-*/
 
 }
 
@@ -50,10 +54,6 @@ app.whenReady().then(() => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
 })
-
-//app.on('window-all-closed', () => {
-//})
-//console.log(dialog.showOpenDialog({ properties: ['openFile', 'multiSelections'] }))dd
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit()
