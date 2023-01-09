@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/main.js",
+  "type": "module",
   "scripts": {
     "start": "electron .",
     "startOld": "electron .",
@@ -12,9 +13,19 @@
   "author": "Gavin Francis <gav@eh7.co.uk>",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^22.0.0"
+    "electron": "^22.0.0",
+    "eslint": "^8.31.0",
+    "eslint-config-semistandard": "^17.0.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.6.0",
+    "eslint-plugin-promise": "^6.1.1"
   },
   "dependencies": {
+    "@chainsafe/libp2p-noise": "^11.0.0",
+    "@libp2p/floodsub": "^6.0.0",
+    "@libp2p/mplex": "^7.1.1",
+    "@libp2p/tcp": "^6.0.8",
     "libp2p": "^0.41.0"
   }
 }
